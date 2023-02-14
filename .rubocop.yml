@@ -45,6 +45,8 @@ Layout/HashAlignment:
   EnforcedColonStyle: key
 Layout/ExtraSpacing:
   AllowForAlignment: false
+Layout/EndOfLine:
+  Enabled: False
 Layout/MultilineMethodCallIndentation:
   Enabled: true
   EnforcedStyle: indented
