@@ -33,3 +33,6 @@
 #ignore module files
 # .gitignore
 node_modules/
+
+# ignore database.yml  file 
+/config/database.yml
