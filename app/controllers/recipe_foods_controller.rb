@@ -1,17 +1,13 @@
 class RecipeFoodsController < ApplicationController
-    def new
-        @recipe = Recipe.find(params[:recipe_id])
-        @recipe_new = @recipe.recipe_foods.new
-        @foods = Food.all
-    end
+  def new
+    @recipe = Recipe.find(params[:recipe_id])
+    @recipe_new = @recipe.recipe_foods.new
+    @foods = Food.all
+  end
 
-    def create
+  def create
+  end
 
-    end
-
-    def destroy
-        
-    end
-
-
+  def destroy
+  end
 end
