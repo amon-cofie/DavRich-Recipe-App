@@ -3,14 +3,13 @@ class RecipesController < ApplicationController
     @recipes = Recipe.all
   end
 
-
-
   def new
     @recipe = Recipe.new
   end
 
-  def create 
-    @recipe = Recipe.new(name: params[:name], preparation_time: params[:preparation_time], cooking_time: params[:cooking_time], description: params[:description], public: params[:public])
+  def create
+    @recipe = Recipe.new(name: params[:name], preparation_time: params[:preparation_time],
+                         cooking_time: params[:cooking_time], description: params[:description], public: params[:public])
     @recipe.user = current_user
     if @recipe.save
       redirect_to_recipes_path, notice = 'recipe added successfully'
@@ -35,4 +34,4 @@ class RecipesController < ApplicationController
   def recipe_params
     params.require(:recipe).permit(:name, :preparation_time, :cooking_time, description, :public)
   end
-end 
+end
