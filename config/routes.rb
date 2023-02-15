@@ -15,5 +15,5 @@ Rails.application.routes.draw do
   resources :foods, only: [:index, :show]
   resources :shopping_lists, only: [:index, :show]
 
-  
+  get 'recipes/index'
 end
