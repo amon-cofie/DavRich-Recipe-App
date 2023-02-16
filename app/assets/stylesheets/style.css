@@ -29,12 +29,11 @@
   row-gap: 1rem;
 }
 
-
 .recipe-status {
   display: flex;
-   gap: 2rem;
-   justify-content: space-between;
-   width: 90%;
+  gap: 2rem;
+  justify-content: space-between;
+  width: 90%;
 }
 
 .recipe-name {
