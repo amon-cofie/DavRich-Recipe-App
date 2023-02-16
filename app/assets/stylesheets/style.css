@@ -5,6 +5,12 @@
   box-sizing: border-box;
 }
 
+.recipe-container {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+}
+
 .recipe-box {
   display: flex;
   align-items: baseline;
@@ -29,6 +35,14 @@
   row-gap: 1rem;
 }
 
+.add-recipe {
+  width: 5rem;
+  padding: 4px;
+  border-radius: 3px;
+  border: 1px solid blue;
+  text-decoration: none;
+}
+
 .recipe-status {
   display: flex;
   gap: 2rem;
@@ -38,4 +52,21 @@
 
 .recipe-name {
   align-self: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+}
+
+.form_control {
+  width: 12rem;
+  gap: 5px;
+}
+
+.msg-input {
+  width: 20rem;
+  height: 5rem;
+  margin: 1rem 0;
 }
