@@ -12,9 +12,9 @@ class RecipesController < ApplicationController
                          cooking_time: params[:cooking_time], description: params[:description], public: params[:public])
     @recipe.user = current_user
     if @recipe.save
-      redirect_to_recipes_path, notice = 'recipe added successfully'
+      redirect_to recipes_path, notice: 'recipe added successfully'
     else
-      render new, alert = 'sorry an error happened. try again'
+      render new, alert: 'sorry an error happened. try again'
     end
   end
 
@@ -26,7 +26,7 @@ class RecipesController < ApplicationController
   def destroy
     @recipe = Recipe.find(params[:id])
     @recipe.destroy
-    redirect_to_recipes_path, alert = 'Recipe has been deleted'
+    redirect_to recipes_path, alert: 'Recipe has been deleted'
   end
 
   private
