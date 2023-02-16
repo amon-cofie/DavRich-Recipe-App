@@ -23,7 +23,7 @@ default: &default
   database: davrich_recipe_app
   host: localhost
   username: postgres
-  password: Ohemaa@123
+  password: 1997
 
 development:
   <<: *default
