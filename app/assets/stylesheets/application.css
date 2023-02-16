@@ -13,3 +13,81 @@
  *= require_tree .
  *= require_self
  */
+
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+
+ .food_table {
+   border-collapse: collapse;
+   width: 70%;
+   clear: right;
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+ .food_table td, .food_table th {
+   border: 1px solid #ddd;
+  padding: 8px;
+ }
+
+ .food_table tr:nth-child(even){background-color: #f2f2f2;}
+ .food_table tr:hover {background-color: #ddd;}
+
+ .food_table th {
+   padding-top: 12px;
+   padding-bottom: 12px;
+   text-align: left;
+   background-color: #3b3b3b;
+   color: white;
+ }
+
+ .add_food_button {
+   float: right;
+   margin: 2rem;
+ }
+
+ .add_food_button button {
+   border: 1px solid black;
+   background-color: white;
+ }
+
+ .add_food_button button a {
+   padding: 1rem;
+   font-size: 1rem;
+   text-decoration: none;
+   color: black;
+   font-weight: 700;
+ }
+
+ /* Food form */
+ .food_form_container {
+   margin-left: auto;
+   margin-right: auto;
+   width: 500px;
+   margin-top: 2rem;  
+ }
+
+ .food_form_container form {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+ }
+
+ .food_field {
+   width: 100%;
+}
+
+.food_field input {
+   padding: 5px;
+   width: 100%;
+   border: 1px solid black;
+ }
+
+ .food_form_submit_button {
+   border: 1px solid black;
+   padding: 5px;
+ }
