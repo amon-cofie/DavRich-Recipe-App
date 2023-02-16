@@ -1,0 +1,20 @@
+<h1> Recipes Index</h1>
+
+<article>
+  <div class="recipe-container">
+      <h2> <% @recipes.each do |recipe| %> </h2>
+      <div class="recipe-box">
+        <div class="left-block">
+          <h3> <%= link_to recipe.name, recipe_path(recipe.id)  %> </h3>
+          <button> Remove </button>
+        </div>
+        <div class="right-block">
+          <p class="recipe-desc"> <%= recipe.description %> </p>
+        </div>  
+      </div> 
+      <% end %>
+    
+
+
+  </div>
+</article>
