@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   font-family: sans-serif, poppins;
+  box-sizing: border-box;
 }
 
 .recipe-box {
@@ -14,8 +15,28 @@
   padding: 2rem;
 }
 
+.recipe-details {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 2rem;
+  align-items: baseline;
+}
+
 .left-block {
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
+}
+
+
+.recipe-status {
+  display: flex;
+   gap: 2rem;
+   justify-content: space-between;
+   width: 90%;
+}
+
+.recipe-name {
+  align-self: center;
 }
