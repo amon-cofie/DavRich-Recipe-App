@@ -40,7 +40,7 @@
   padding: 4px;
   border-radius: 3px;
   border: 1px solid blue;
-text-decoration: none;
+  text-decoration: none;
 }
 
 .recipe-status {
@@ -65,9 +65,8 @@ form {
   gap: 5px;
 }
 
-
 .msg-input {
   width: 20rem;
   height: 5rem;
-  margin: 1rem 0   ;
+  margin: 1rem 0;
 }
