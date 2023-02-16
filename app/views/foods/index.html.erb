@@ -1,0 +1,22 @@
+<div class="add_food_button">
+    <button>
+        <%= link_to 'Add food',new_food_path %>
+    </button>
+</div>
+
+<table class="food_table">
+  <tr>
+    <th>Food</th>
+    <th>Measurement Unit</th>
+    <th>Unit Price</th>
+    <th>Actions</th>
+  </tr>
+    <% @foods.each do |food|%>
+        <tr>
+            <td><%= food.name%></td>
+            <td><%= food.measurement_unit%></td>
+            <td><%= food.price%></td>
+            <td>action</td>
+        </tr>
+    <% end %>
+</table>
