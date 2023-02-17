@@ -1,4 +1,5 @@
 class ShoppingListsController < ApplicationController
+  before_action :authenticate_user!
   def index
     @all_ingredients = RecipeFood.includes(:recipe, :food)
     @missing = @all_ingredients.select { |ing| ing.quantity > ing.foods.quantity }
