@@ -1,0 +1,17 @@
+<h1>Add new Recipe</h1>
+
+ <%= form_with model: @recipe_new, url: recipe_recipe_foods_path do |f| %>
+  <div class="form_control">
+      <%= f.label :quantity %>
+      <%= f.number_field :quantity %>
+    </div>
+
+    <div class="form_control">
+    <%= f.select(:food_id, @foods.map{|u| [u.name, u.id]}) %>
+    </div>
+
+    <div class="form_control">
+    <%= f.hidden_field :recipe_id, value: @recipe_new.recipe_id %>
+    </div>
+    <%= f.submit "Submit", class:"btn btn-success" %>
+<% end%>
