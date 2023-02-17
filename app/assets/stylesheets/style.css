@@ -52,6 +52,18 @@
   align-self: center;
 }
 
+.recipe-actions {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  padding: 0 10rem;
+}
+
+.recipe-btn {
+  border: 1px solid grey;
+  background-color: blue;
+}
+
 form {
   display: flex;
   flex-direction: column;
