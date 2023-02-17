@@ -1,0 +1,21 @@
+<div>
+    <span>Amount of food items to buy: <%= @missing.count %></span>
+    <span>Total value of food needed: $<%= @total_price.floor %></span>
+</div>
+
+
+<table class="food_table">
+  <tr>
+    <th>Food</th>
+    <th>Quantity</th>
+    <th>Price</th>
+    
+  </tr>
+    <% @missing_ingredients.each do |food|%>
+        <tr>
+            <td><%= food[:name]%></td>
+            <td><%= food[:quantity]%></td>
+            <td><%= food[:price]%></td>
+        </tr>
+    <% end %>
+</table>
