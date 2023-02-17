@@ -1,7 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DavRichRecipeApp</title>
+
+  <header>
+  <div class="signup">
+    <span></span>
+      <div class="login-logout">
+        <ul class="li-login">
+        <% if user_signed_in? %>
+          <li><%= button_to "LogOut", destroy_user_session_path, method: :delete, class:"log-btn" %></li>
+          <% else %>
+            <li><%= link_to "Login", new_user_session_path, class:"log-btn" %></li>
+          <% end %>
+        </ul>
+      </div>
+  </div>
+  
+  <div class="nav-box">
+    <h1>My Recipe App</h1>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="url"><%= link_to "Recipes", recipes_path %></a></a></li>
+          <li><a href=""> <%= link_to "Public Recipes", recipes_path %></a></li>
+          <li><a href=""> <%= link_to "General Shopping List", recipes_path %></a></li>
+          <li><a href=""> <%= link_to "Foods", foods_path %></li>
+        </ul>
+      </nav>
+  </div>
+
+  </header>
+
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
