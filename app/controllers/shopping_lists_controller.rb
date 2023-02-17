@@ -1,6 +1,6 @@
 class ShoppingListsController < ApplicationController
   def index
-    @all_ingredients = RecipeFood.includes(:recipes, :foods)
+    @all_ingredients = RecipeFood.includes(:recipe, :food)
     @missing = @all_ingredients.select { |ing| ing.quantity > ing.foods.quantity }
     @missing_ingredients = missing.map do |ingredient|
       {
