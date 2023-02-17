@@ -1,0 +1,50 @@
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1rem;
+  background-color: burlywood;
+  color: #fff;
+}
+
+.nav-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 1rem;
+}
+
+.li-login {
+  display: flex;
+  gap: 5px;
+  list-style: none;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+li {
+  color: #fff;
+  font-size: 18px;
+}
+
+
+.signup {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.log-btn {
+  padding: 5px;
+  color: aqua;
+  background-color: black;
+  border: 1px solid blue;
+}
