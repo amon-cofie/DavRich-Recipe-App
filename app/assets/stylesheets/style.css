@@ -1,0 +1,92 @@
+* {
+  font-family: sans-serif, poppins;
+  box-sizing: border-box;
+}
+
+.recipe-container {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+}
+
+.recipe-box {
+  display: flex;
+  align-items: baseline;
+  gap: 2rem;
+  border: 1px solid black;
+  width: auto;
+  margin: 2rem;
+  padding: 2rem;
+}
+
+.recipe-details {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 2rem;
+  align-items: baseline;
+}
+
+.left-block {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.add-recipe {
+  width: 5rem;
+  padding: 4px;
+  border-radius: 3px;
+  border: 1px solid blue;
+  text-decoration: none;
+}
+
+.recipe-status {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.recipe-name {
+  align-self: center;
+}
+
+.recipe-actions {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  padding: 0 10rem;
+}
+
+.recipe-btn {
+  border: 1px solid grey;
+  background-color: blue;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+}
+
+.form_control {
+  width: 12rem;
+  gap: 5px;
+}
+
+.msg-input {
+  width: 20rem;
+  height: 5rem;
+  margin: 1rem 0;
+}
+
+.tbtn {
+  width: 5rem;
+}
+
+.mod-btn {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+}

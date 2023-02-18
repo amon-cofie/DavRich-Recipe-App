@@ -29,3 +29,10 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+#ignore module files
+# .gitignore
+node_modules/
+
+# ignore database.yml  file 
+/config/database.yml
