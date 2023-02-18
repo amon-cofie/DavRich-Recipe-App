@@ -9,20 +9,36 @@
       <p>Cooking time: <%=  @recipes.cooking_time %> hours</p>
     </div>
     <div class="right-block">
-      <span>Public:[''] </span> 
+      <span>Public: <%= check_box :public, value: "true"%></span> 
     </div>
  </div>
   <h2> Steps to prepare </h2>
 
-<div class="recipe__actions">
-      <%
-=begin%>
- <%= link_to 'Generate shopping list', general_shopping_lists_path %>
-      <%= link_to 'Add ingredient',  new_recipe_recipe_food_path(@recipes.id) %> 
-<%
-=end%>
-    <h3> shopping list will be here</h3>
+<div class="recipe-actions">
+    <%= link_to 'Generate shopping list', class:"recipe-btn"%>
+    <%= link_to 'Add Ingridients', new_recipe_recipe_food_path(@recipes.id), class: "recipe-btn"%>
     </div>
 </div>
 <hr>
+
+<table>
+  <tr>
+    <th>Food</th>
+    <th>Quantity</th>
+    <th>Value</th>
+    <th>Actions</th>
+  </tr>
+
+  <% @recipes.recipe_foods.each do |r_food| %>
+  <tr>
+    <td> <%= r_food.food.name %> </td>
+    <td><%= r_food.quantity%> </td>
+    <td><%=r_food.food.price %> </td>
+    <td><%= button_to "modify" %> 
+    <%= button_to ' Remove', recipe_recipe_food_path(@recipes.id, r_food.id), method: :delete %>
+    </td>
+  </tr>
+  <%end%>
+
+</table>
 
