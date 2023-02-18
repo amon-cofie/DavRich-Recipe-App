@@ -92,3 +92,22 @@
   border: 1px solid black;
   padding: 5px;
 }
+
+.public_recipes_container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  width: 80%;
+}
+
+.public_recipe_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.public_recipe_details_container {
+  width: 50%;
+}

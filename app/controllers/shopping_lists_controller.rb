@@ -1,8 +1,9 @@
 class ShoppingListsController < ApplicationController
+  before_action :authenticate_user!
   def index
     @all_ingredients = RecipeFood.includes(:recipe, :food)
     @missing = @all_ingredients.select { |ing| ing.quantity > ing.foods.quantity }
-    @missing_ingredients = missing.map do |ingredient|
+    @missing_ingredients = @missing.map do |ingredient|
       {
         name: ingredient.foods.name,
         quantity: ingredient.quantity - ingredient.foods.quantity,
