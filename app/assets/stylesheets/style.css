@@ -80,3 +80,13 @@ form {
   height: 5rem;
   margin: 1rem 0;
 }
+
+.tbtn {
+  width: 5rem;
+}
+
+.mod-btn {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+}
