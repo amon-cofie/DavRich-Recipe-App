@@ -15,13 +15,13 @@
   <h2> Steps to prepare </h2>
 
 <div class="recipe-actions">
-    <%= link_to 'Generate shopping list', class:"recipe-btn"%>
+    <%= link_to 'Generate shopping list', shopping_lists_path(@recipes.id), class:"recipe-btn"%>
     <%= link_to 'Add Ingridients', new_recipe_recipe_food_path(@recipes.id), class: "recipe-btn"%>
     </div>
 </div>
 <hr>
 
-<table>
+<table class="food_table">
   <tr>
     <th>Food</th>
     <th>Quantity</th>
@@ -34,8 +34,9 @@
     <td> <%= r_food.food.name %> </td>
     <td><%= r_food.quantity%> </td>
     <td><%=r_food.food.price %> </td>
-    <td><%= button_to "modify" %> 
-    <%= button_to ' Remove', recipe_recipe_food_path(@recipes.id, r_food.id), method: :delete %>
+    <td class="mod-btn">
+    <%= button_to 'modify', recipe_recipe_food_path(@recipes.id, r_food.id), class:"recipe_table_button" %> 
+    <%= button_to ' Remove', recipe_recipe_food_path(@recipes.id, r_food.id), method: :delete, class:"recipe_table_button" %>
     </td>
   </tr>
   <%end%>
