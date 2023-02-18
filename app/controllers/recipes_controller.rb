@@ -1,5 +1,6 @@
 class RecipesController < ApplicationController
-  before_action :authenticate_user!
+  # load_and_authorize_resource
+  before_action :authenticate_user!, except: [:show]
 
   def index
     @recipes = Recipe.all
@@ -20,6 +21,7 @@ class RecipesController < ApplicationController
   end
 
   def show
+    @recipe = Recipe.find(params[:id])
     @recipes = Recipe.includes(:recipe_foods).find(params[:id])
   end
 

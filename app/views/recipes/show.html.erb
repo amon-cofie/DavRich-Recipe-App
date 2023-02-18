@@ -1,45 +1,53 @@
 <h1>Show Recipes </h1>
 
-<div class="recipe-details">
-    <h2 class="recipe-name"> <%= @recipes.name %> </h2>
-  <div class="recipe-status">
-    
-    <div class="left-block">
-      <span>Preparation time : <%= @recipes.preparation_time%> </span>
-      <p>Cooking time: <%=  @recipes.cooking_time %> hours</p>
-    </div>
-    <div class="right-block">
-      <span>Public: <%= check_box :public, value: "true"%></span> 
-    </div>
- </div>
-  <h2> Steps to prepare </h2>
+  <div class="recipe-details">
+      <h2 class="recipe-name"> <%= @recipes.name %> </h2>
+    <div class="recipe-status">
+      
+      <div class="left-block">
+        <span>Preparation time : <%= @recipes.preparation_time%> </span>
+        <p>Cooking time: <%=  @recipes.cooking_time %> hours</p>
+      </div>
+      <div class="right-block">
+        <span>Public: <%= check_box :public, value: "true"%></span> 
+      </div>
+  </div>
+    <h2> Steps to prepare </h2>
 
-<div class="recipe-actions">
-    <%= link_to 'Generate shopping list', shopping_lists_path(@recipes.id), class:"recipe-btn"%>
-    <%= link_to 'Add Ingridients', new_recipe_recipe_food_path(@recipes.id), class: "recipe-btn"%>
-    </div>
-</div>
-<hr>
+  <%if can? :manage, @recipe %>
+  <div class="recipe-actions">
+      <%= link_to 'Generate shopping list', shopping_lists_path(@recipes.id), class:"recipe-btn"%>
+      <%= link_to 'Add Ingridients', new_recipe_recipe_food_path(@recipes.id), class: "recipe-btn"%>
+      </div>
+  </div>
+  <% else %>
+      <div>Please login to add ingredients</div>
+  <% end %>
+  <hr>
 
-<table class="food_table">
-  <tr>
-    <th>Food</th>
-    <th>Quantity</th>
-    <th>Value</th>
-    <th>Actions</th>
-  </tr>
+  <table class="food_table">
+    <tr>
+      <th>Food</th>
+      <th>Quantity</th>
+      <th>Value</th>
+      <th>Actions</th>
+    </tr>
 
-  <% @recipes.recipe_foods.each do |r_food| %>
-  <tr>
-    <td> <%= r_food.food.name %> </td>
-    <td><%= r_food.quantity%> </td>
-    <td><%=r_food.food.price %> </td>
-    <td class="mod-btn">
-    <%= button_to 'modify', recipe_recipe_food_path(@recipes.id, r_food.id), class:"recipe_table_button" %> 
-    <%= button_to ' Remove', recipe_recipe_food_path(@recipes.id, r_food.id), method: :delete, class:"recipe_table_button" %>
-    </td>
-  </tr>
-  <%end%>
+    <% @recipes.recipe_foods.each do |r_food| %>
+    <tr>
+      <td> <%= r_food.food.name %> </td>
+      <td><%= r_food.quantity%> </td>
+      <td><%=r_food.food.price %> </td>
+      <td class="mod-btn">
+      <%= button_to 'modify', recipe_recipe_food_path(@recipes.id, r_food.id), class:"recipe_table_button" %> 
+      <%= button_to ' Remove', recipe_recipe_food_path(@recipes.id, r_food.id), method: :delete, class:"recipe_table_button" %>
+      </td>
+    </tr>
+    <%end%>
 
-</table>
+  </table>
+
+
+
+
 
